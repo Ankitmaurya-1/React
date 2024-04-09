@@ -74,7 +74,7 @@ export class Service {
 
     }
 
-    // remove slugh from curly barcs
+    // remove slug from curly braces if there is any error
 
     async getPost({ slug }) {
         try {
@@ -102,6 +102,8 @@ export class Service {
 
 
     // files upload services
+
+
     async uploadFile(file) {
         try {
             return await this.bucket.createFile(
